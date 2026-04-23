@@ -45,6 +45,16 @@ GET : http://localhost:8081/api/v1/rooms/R101
 200 ok, 
 Returns details of the specific room 
 
+#### Delete room 
+DELETE :  http://localhost:8081/api/v1/rooms/R101
+##### Expected Results:
+Room is deleted 
+
+#### Create Sensor(Invalid Room)
+Request:
+POST : http://localhost:8081/api/v1/sensors
+Body: { "id": "S1", "type": "CO2", "status": "ACTIVE", "currentValue": 0.0, "roomId": "R102" }
+
 #### Create Sensor(Valid Room)
 Request:
 POST : http://localhost:8081/api/v1/sensors
